@@ -21,4 +21,10 @@ public class CompaniaService
     {
         return companiaRepository.findById(id).orElse(null);
     }
+
+    //Method to find by name.
+    // public Compania findByName(String name)
+    // {
+    //     return companiaRepository.findByName(name);
+    // }
 }
