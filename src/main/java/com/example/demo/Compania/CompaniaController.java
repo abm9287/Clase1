@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController // Esta anotación indica a Spring que esta clase es un controlador.
-@RequestMapping("/api/prueba") // Esta anotación indica a Spring que esta clase es un controlador.
+@RestController 
+@RequestMapping("/api/comp/") 
 public class CompaniaController 
 {
-    @Autowired // Esta anotación indica a Spring que inyecte la instancia CompaniaService en el CompaniaController.
-    private CompaniaService companiaService;// Inyección de dependencias desde el controller hasta el service
+    @Autowired
+    private CompaniaService companiaService;
 
-    @PostMapping("/save") // Este método se asigna a la ruta /api/prueba/save.
-    public Compania save(@RequestBody Compania entity)
+    @PostMapping("/")
+    public Campania save(@RequestBody Campania entity)
     {
         return companiaService.save(entity);
     }
 
-    
+
 }

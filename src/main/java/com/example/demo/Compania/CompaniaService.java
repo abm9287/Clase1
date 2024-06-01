@@ -10,9 +10,14 @@ public class CompaniaService
     private CompaniaRepository companiaRepository;
     
     // Este método recupera todos los registros de la tabla Compania.
-    public Compania save(Compania entity)
+    public Campania save(Campania entity)
     {
         // Este método guarda un registro en la tabla Compania.
         return companiaRepository.save(entity);
+    }
+
+    public Campania findById(Long id)
+    {
+        return companiaRepository.findById(id).orElse(null);
     }
 }
