@@ -16,6 +16,7 @@ public class CompaniaService
         return companiaRepository.save(entity);
     }
 
+    //Method to find by id.
     public Campania findById(Long id)
     {
         return companiaRepository.findById(id).orElse(null);
